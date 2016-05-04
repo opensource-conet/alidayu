@@ -76,7 +76,6 @@ func getRequestBody(m map[string]string) (reader io.Reader, size int64) {
 }
 
 func responseToResult(m map[string]string) (*Result, error) {
-
 	success, response, err := postAlidayu(m)
 	if err != nil {
 		return nil, err
@@ -89,5 +88,4 @@ func responseToResult(m map[string]string) (*Result, error) {
 	}
 	resultmod.Success = success
 	return resultmod, nil
-
 }

@@ -12,18 +12,20 @@ import (
 
 // 设置参数常量
 const (
-	methodSendSMS    string = "alibaba.aliqin.fc.sms.num.send"
-	methodCallTTS    string = "alibaba.aliqin.fc.tts.num.singlecall"
-	methodCallVoice  string = "alibaba.aliqin.fc.voice.num.singlecall"
-	methodCallDouble string = "alibaba.aliqin.fc.voice.num.doublecall"
+	methodSendSMS    = "alibaba.aliqin.fc.sms.num.send"
+	methodCallTTS    = "alibaba.aliqin.fc.tts.num.singlecall"
+	methodCallVoice  = "alibaba.aliqin.fc.voice.num.singlecall"
+	methodCallDouble = "alibaba.aliqin.fc.voice.num.doublecall"
 
 	// 正式环境
-	httpsURL string = "http://gw.api.taobao.com/router/rest"
+	httpsURL = "http://gw.api.taobao.com/router/rest"
 	// "http://gw.api.taobao.com/router/rest"
 	// https://eco.taobao.com/router/rest
 
 	// 沙箱环境
-	sandboxHTTPSURL string = "https://gw.api.tbsandbox.com/router/rest"
+	sandboxHTTPSURL = "https://gw.api.tbsandbox.com/router/rest"
+
+	calledShowNum = "4008221620"
 )
 
 var (
@@ -115,7 +117,7 @@ func SendLecall(mobile, templatecode, param string) (*Result, error) {
 	cm.Timestamp = time.Now().Format("2006-01-02 15:04:05")
 	lm := &lecallModel{
 		// 被叫号码
-		CalledShowNum: "4008221620",
+		CalledShowNum: calledShowNum,
 		TtsParam:      param,
 		TtsCode:       templatecode,
 		CalledNum:     mobile,

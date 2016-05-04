@@ -8,20 +8,24 @@
 
 引用包
 
-`import(
+```go
+import(
   "alidayu"
-  )`
+  )
+```
 
 初始化函数
 
 
-`// 初始化阿里云`
+```go
+// 初始化阿里云
 
-`alidayu.Appkey = "xxxxxxx"`
+alidayu.Appkey = "xxxxxxx"
 
-`alidayu.AppSecret = "xxxxxxxxxxxxxxxxxxxxxxxxx"`
+alidayu.AppSecret = "xxxxxxxxxxxxxxxxxxxxxxxxx"
 
-`alidayu.IsDebug = false`
+alidayu.IsDebug = false
+```
 
 ## 短信接口
 
@@ -37,9 +41,9 @@
 
 >// 返回Result格式，请确保输出成功失败的结构体引用，如果Result.Success为true则获取Result.ResultError报错
 
-`
+```go
 alidayu.SendOnce("136xxxxxxx8","测试",“SM_777777”,"{'code':'666666'}")
-`
+```
 
 ##  
 
@@ -55,9 +59,9 @@ alidayu.SendOnce("136xxxxxxx8","测试",“SM_777777”,"{'code':'666666'}")
 
 >// 返回Result格式，请确保输出成功失败的结构体引用，如果Result.Success为true则获取Result.ResultError报错
 
-`
+```go
 alidayu.SendBatch("136xxxxxxx8,136xxxxxxx3","测试","SM_777777","{'code':'666666'}")
-`
+```
 
 ## 文本转语音接口
 
@@ -71,9 +75,9 @@ alidayu.SendBatch("136xxxxxxx8,136xxxxxxx3","测试","SM_777777","{'code':'66666
 
 >// 返回Result格式，请确保输出成功失败的结构体引用，如果Result.Success为true则获取Result.ResultError报错
 
-`
+```go
 alidayu.SendLecall("136xxxxxxx8","TL_777777","{'code':‘666666’}")
-`
+```
 
 
 ## 返回格式
