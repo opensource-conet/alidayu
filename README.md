@@ -8,7 +8,7 @@
 
 引用包
 
-`iport(
+`import(
   "alidayu"
   )`
 
